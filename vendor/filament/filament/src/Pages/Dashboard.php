@@ -7,6 +7,8 @@ use Filament\Support\Facades\FilamentIcon;
 use Filament\Widgets\Widget;
 use Filament\Widgets\WidgetConfiguration;
 use Illuminate\Contracts\Support\Htmlable;
+use App\Filament\Widgets\StudentChart;
+use App\Filament\Widgets\StudentAverageChart;
 
 class Dashboard extends Page
 {
@@ -43,7 +45,13 @@ class Dashboard extends Page
      */
     public function getWidgets(): array
     {
-        return Filament::getWidgets();
+        // return Filament::getWidgets();
+        return [
+          
+            StudentChart::class,
+            StudentAverageChart::class,
+        
+        ];
     
     }
 

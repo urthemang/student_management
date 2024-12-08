@@ -69,11 +69,14 @@
 <body>
 
     <div class="shadow-lg card">
-        <div class="text-end">
-
-        </div>
-
+    <div class="text-end">
+        <form action="{{ route('logout')}}" method="POST"> 
+            @csrf
+            <button type="submit" class="btn text-white btn-logout">Logout</button>
+        </form>
+    </div>
         <h2 class="mb-4 text-center">Welcome, {{ $studentData->name }}</h2>
+       
         <p class="text-center">{{ $studentData->email }}</p>
 
         <h3 class="mt-4">Enrolled Subjects:</h3>
